@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090f">
+<title>MotionAI — Motion Transfer Studio</title>
+<style>
+:root{color-scheme:dark;--bg:#09090f;--panel:#12121d;--panel2:#181827;--line:#29293b;--muted:#9a9ab0;--text:#f5f4ff;--purple:#8b5cf6;--purple2:#6d3ee8;--good:#48d6a0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#29204b 0%,var(--bg) 48%);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+.wrap{max-width:1050px;margin:auto;padding:24px 18px 60px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:42px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;letter-spacing:-.5px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#a78bfa,#6d3ee8);display:grid;place-items:center;box-shadow:0 8px 30px #8b5cf644}.logo svg{width:22px}.pill{font-size:12px;color:#c9baff;border:1px solid #55418a;background:#241b3d;padding:6px 10px;border-radius:99px}
+.hero{text-align:center;margin-bottom:30px}.eyebrow{color:#b8a2ff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.06;letter-spacing:-2px;margin:12px 0}.gradient{background:linear-gradient(90deg,#c4b5fd,#8b5cf6,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:570px;margin:0 auto}
+.panel{max-width:800px;margin:0 auto;background:linear-gradient(180deg,#171725,#11111a);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 24px 80px #0006}.section-title{font-weight:750;font-size:17px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 17px}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.mode{border:1px solid var(--line);background:#11111b;color:var(--text);padding:15px;border-radius:15px;text-align:left;cursor:pointer;transition:.2s}.mode.active{border-color:var(--purple);background:#211936;box-shadow:inset 0 0 0 1px #8b5cf644}.mode strong{display:block;margin:7px 0 2px}.mode span{font-size:12px;color:var(--muted)}.mode .ico{font-size:21px}
+.uploads{display:grid;grid-template-columns:1fr 1fr;gap:12px}.upload{border:1px dashed #45435e;border-radius:16px;padding:16px;background:#0e0e17;min-width:0}.upload h3{font-size:14px;margin:0 0 4px}.upload p{font-size:12px;color:var(--muted);margin:0 0 12px}.drop{min-height:142px;border:1px dashed #39394d;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;position:relative;background:#141420}.drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}.drop-content{pointer-events:none}.drop .up{font-size:25px}.drop b{display:block;font-size:13px;margin-top:5px}.drop small{color:var(--muted);font-size:11px}.filename{font-size:11px;color:#c4b5fd;overflow-wrap:anywhere;margin-top:8px;min-height:16px}
+.actions{display:flex;gap:10px;align-items:center;margin-top:18px}.primary,.secondary{border:0;border-radius:12px;padding:12px 17px;font-weight:750;cursor:pointer}.primary{color:white;background:linear-gradient(135deg,#966bff,#713de5);box-shadow:0 8px 22px #713de544;flex:1}.primary:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#252538;color:#e7e3ff}.notice{font-size:12px;color:var(--muted);margin-top:14px}.status{display:none;margin-top:14px;padding:12px;border-radius:12px;background:#1c1930;border:1px solid #493775;color:#d8cbff;font-size:13px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:800px;margin:20px auto}.feature{padding:15px;border:1px solid var(--line);border-radius:15px;background:#11111a}.feature b{display:block;font-size:13px;margin:6px 0 3px}.feature span{font-size:11px;color:var(--muted)}footer{text-align:center;color:#77778c;font-size:11px;margin-top:35px}
+@media(max-width:620px){.wrap{padding:18px 13px 40px}.top{margin-bottom:32px}.panel{padding:15px}.uploads{grid-template-columns:1fr}.features{grid-template-columns:1fr}.mode{padding:12px}.actions{flex-direction:column}.primary,.secondary{width:100%}.hero h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 7h4l3-3 3 3h4v10h-4l-3 3-3-3H5z"/><path d="m10 9 5 3-5 3z" fill="white" stroke="none"/></svg></div>MotionAI</div>
+    <div class="pill">MOTION TRANSFER STUDIO</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Bring any subject to life</div>
+    <h1>Move beyond the <span class="gradient">still frame.</span></h1>
+    <p>Transfer movement from a reference video to another video or a still image.</p>
+  </section>
+
+  <main class="panel">
+    <h2 class="section-title">Create a motion transfer</h2>
+    <p class="sub">Choose how you want to apply the reference movement.</p>
+
+    <div class="modes">
+      <button class="mode active" id="videoMode" type="button" aria-pressed="true">
+        <div class="ico">🎬</div><strong>Video to Video</strong><span>Apply motion to a target video</span>
+      </button>
+      <button class="mode" id="imageMode" type="button" aria-pressed="false">
+        <div class="ico">🖼️</div><strong>Video to Image</strong><span>Animate a still image</span>
+      </button>
+    </div>
+
+    <div class="uploads">
+      <section class="upload">
+        <h3>1. Reference video</h3>
+        <p>The video whose movement you want to copy.</p>
+        <label class="drop" for="reference">
+          <input id="reference" type="file" accept="video/*">
+          <span class="drop-content"><span class="up">⬆️</span><b>Choose reference video</b><small>MP4, MOV, WebM</small></span>
+        </label>
+        <div class="filename" id="referenceName">No file selected</div>
+      </section>
+      <section class="upload">
+        <h3 id="targetTitle">2. Target video</h3>
+        <p id="targetHelp">The person or character that should receive the movement.</p>
+        <label class="drop" for="target">
+          <input id="target" type="file" accept="video/*">
+          <span class="drop-content"><span class="up">⬆️</span><b id="targetButton">Choose target video</b><small id="targetFormats">MP4, MOV, WebM</small></span>
+        </label>
+        <div class="filename" id="targetName">No file selected</div>
+      </section>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="generate" type="button" disabled>AI processing connection coming next</button>
+      <button class="secondary" id="clear" type="button">Clear files</button>
+    </div>
+    <div class="status" id="status" role="status"></div>
+    <p class="notice">Starter preview: file selection works locally in your browser. AI generation is not connected yet. No files are uploaded by this demo.</p>
+  </main>
+
+  <section class="features">
+    <div class="feature">⚡<b>Motion extraction</b><span>Analyze movement from your reference.</span></div>
+    <div class="feature">🎨<b>Two creation modes</b><span>Animate a video or a still image.</span></div>
+    <div class="feature">⬇️<b>Clean exports</b><span>No watermark added by MotionAI.</span></div>
+  </section>
+  <footer>MotionAI · Independent project · AI processing will be connected in a later stage</footer>
+</div>
+<script>
+const videoMode=document.getElementById('videoMode');
+const imageMode=document.getElementById('imageMode');
+const target=document.getElementById('target');
+const reference=document.getElementById('reference');
+const generate=document.getElementById('generate');
+const statusBox=document.getElementById('status');
+let mode='video';
+
+function setMode(next){
+  mode=next;
+  videoMode.classList.toggle('active',mode==='video');
+  imageMode.classList.toggle('active',mode==='image');
+  videoMode.setAttribute('aria-pressed',String(mode==='video'));
+  imageMode.setAttribute('aria-pressed',String(mode==='image'));
+  document.getElementById('targetTitle').textContent=mode==='video'?'2. Target video':'2. Target image';
+  document.getElementById('targetHelp').textContent=mode==='video'?'The person or character that should receive the movement.':'The picture you want to animate.';
+  document.getElementById('targetButton').textContent=mode==='video'?'Choose target video':'Choose target image';
+  document.getElementById('targetFormats').textContent=mode==='video'?'MP4, MOV, WebM':'JPG, PNG, WebP';
+  target.accept=mode==='video'?'video/*':'image/*';
+  target.value='';
+  document.getElementById('targetName').textContent='No file selected';
+  update();
+}
+function update(){
+  document.getElementById('referenceName').textContent=reference.files[0]?.name||'No file selected';
+  document.getElementById('targetName').textContent=target.files[0]?.name||'No file selected';
+  generate.disabled=!(reference.files.length&&target.files.length);
+  generate.textContent=generate.disabled?'Select both files to continue':'Continue (AI not connected yet)';
+  statusBox.style.display='none';
+}
+videoMode.addEventListener('click',()=>setMode('video'));
+imageMode.addEventListener('click',()=>setMode('image'));
+reference.addEventListener('change',update);
+target.addEventListener('change',update);
+document.getElementById('clear').addEventListener('click',()=>{
+  reference.value='';target.value='';update();
+});
+generate.addEventListener('click',()=>{
+  statusBox.textContent='Your files are selected. The next development step is connecting a motion-transfer AI service. This starter does not upload or process your files yet.';
+  statusBox.style.display='block';
+});
+</script>
+</body>
+</html>
